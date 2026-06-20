@@ -1,8 +1,11 @@
-﻿using OOPS.Encapsulation;
+﻿using OOPS.Abstraction;
+using OOPS.Encapsulation;
 using OOPS.Inheritance.Hierarchical;
 using OOPS.Inheritance.Multi_level;
 using OOPS.Inheritance.Single_level;
+using OOPS.Interface;
 using OOPS.OOPS_Basics;
+using OOPS.Polymorphism;
 using System.Xml.Linq;
 
 //Student s = new Student();
@@ -85,5 +88,31 @@ ConstructorChaining c = new ConstructorChaining("Name",1,65);
 Console.WriteLine(c.Name);
 Console.WriteLine(c.id);
 Console.WriteLine(c.marks);
+
+Console.WriteLine("================");
+MethodOverLoading m = new MethodOverLoading();
+
+Console.WriteLine(m.Add(10));
+Console.WriteLine(m.Add(20, 30));
+Console.WriteLine(m.Add(30, 60, 10));
+
+Console.WriteLine("================");
+A m2 = new A();
+m2.Method();
+MethodOverriding m3 = new A();
+m3.Method();
+
+B b2 = new B();
+b2.Method();
+
+Console.WriteLine("================");
+V v = new V();
+v.Start();
+v.Stop();
+
+Console.WriteLine("========= Interfaces =========");
+Swiggy s = new Swiggy();
+s.ProcessPayment(new PhonePo());
+s.ProcessPayment(new GooglePay());
 
 
